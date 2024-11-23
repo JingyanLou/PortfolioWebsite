@@ -3,6 +3,7 @@ import Skills from '../components/Skill'
 import Experience from '../components/Experience'
 import Education from '../components/Education'
 import Service from '../components/Service'
+import Footer from '../components/Footer'
 const Homepage = () => {
     return (
         <div className="flex flex-col min-h-screen">
@@ -13,6 +14,7 @@ const Homepage = () => {
             <Experience />
             <Education />
             <Service />
+            <Footer />
 
 
         </div>

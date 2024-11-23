@@ -57,6 +57,10 @@ const Service = () => {
                 {/* Fourth column is intentionally left empty */}
                 <div className="col-span-1"></div>
             </div>
+
+            {/* Bottom Spacing */}
+            <div className="mb-40"></div>
+
         </section>
     );
 };
