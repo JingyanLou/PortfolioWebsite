@@ -4,7 +4,6 @@ type Education = {
     degree: string;
     courseId: string;
     courseDetails: string[];
-    skills: string[];
 };
 
 const educations: Education[] = [
@@ -19,8 +18,7 @@ const educations: Education[] = [
             "Mobile Development",
             "Software Testing",
             "Professional Practice"
-        ],
-        skills: []
+        ]
     },
     {
         degree: "Bachelor of Computer Science, Data Science",
@@ -34,22 +32,21 @@ const educations: Education[] = [
             "Computer Network",
             "Assembly-MIPS",
             "Web Design"
-        ],
-        skills: []
+        ]
     }
 ];
 
 const Education = () => {
     return (
-        <section className="w-full px-16 py-20 font-['Helvetica']">
+        <section className="w-full py-20 font-['Helvetica']">
             {/* Title Section */}
-            <div className="mb-12">
+            <div className="px-16 mb-12">
                 <h2 className="text-4xl font-bold mb-4">EDUCATION</h2>
                 <div className="w-full h-px bg-black"></div>
             </div>
 
             {/* MONASH Title */}
-            <div className="mb-16">
+            <div className="px-16 mb-16">
                 <h1 className="text-8xl font-black tracking-wide">MONASH</h1>
                 <div className="w-full h-px bg-black mt-4"></div>
             </div>
@@ -58,45 +55,38 @@ const Education = () => {
             <div className="space-y-20">
                 {educations.map((edu, index) => (
                     <div key={index}>
-                        <div className="w-1/2">
-                            {/* Content Row with 50% left margin */}
-                            <div className="flex">
-                                {/* Left side - Empty space */}
-                                <div className="w-1/2">
-                                    <div className="pl-20">
-                                        <h3 className="text-2xl font-bold mb-2">{edu.degree}</h3>
-                                        <p className="text-base">{edu.courseId}</p>
-                                    </div>
+                        <div className="grid grid-cols-12">
+                            {/* Empty left space - 7 columns */}
+                            <div className="col-span-7"></div>
+
+                            {/* Content area - 5 columns */}
+                            <div className="col-span-5 grid grid-cols-5">
+                                {/* Degree Info - 3 columns */}
+                                <div className="col-span-3 pr-8">
+                                    <h3 className="text-xl font-bold mb-2">{edu.degree}</h3>
+                                    <p className="text-base">{edu.courseId}</p>
                                 </div>
 
-                                {/* Right side - Split into two columns */}
-                                <div className="w-1/2 flex gap-8">
-                                    {/* Course Details Column */}
-                                    <div className="w-1/2 space-y-1">
-                                        {edu.courseDetails.map((detail, idx) => (
-                                            <p key={idx} className="text-sm">
-                                                {detail}
-                                            </p>
-                                        ))}
-                                    </div>
-                                    {/* Skills Column */}
-                                    <div className="w-1/2 space-y-1">
-                                        {edu.skills.map((skill, idx) => (
-                                            <p key={idx} className="text-sm">
-                                                {skill}
-                                            </p>
-                                        ))}
-                                    </div>
+                                {/* Course Details - 2 columns */}
+                                <div className="col-span-2 pr-16">
+                                    {edu.courseDetails.map((detail, idx) => (
+                                        <p key={idx} className="text-sm">
+                                            {detail}
+                                        </p>
+                                    ))}
                                 </div>
                             </div>
-
-                            {/* Divider */}
-                            {index < educations.length - 1 && (
-                                <div className="w-full h-px bg-black mt-16"></div>
-                            )}
                         </div>
-                ))}
+
+                        {/* Divider */}
+                        {index < educations.length - 1 && (
+                            <div className="px-16">
+                                <div className="w-full h-px bg-black mt-16"></div>
+                            </div>
+                        )}
                     </div>
+                ))}
+            </div>
         </section>
     );
 };
