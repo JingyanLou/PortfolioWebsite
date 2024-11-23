@@ -4,7 +4,7 @@ type Education = {
     degree: string;
     courseId: string;
     courseDetails: string[];
-    subjects: string[];
+    skills: string[];
 };
 
 const educations: Education[] = [
@@ -20,7 +20,7 @@ const educations: Education[] = [
             "Software Testing",
             "Professional Practice"
         ],
-        subjects: []
+        skills: []
     },
     {
         degree: "Bachelor of Computer Science, Data Science",
@@ -35,7 +35,7 @@ const educations: Education[] = [
             "Assembly-MIPS",
             "Web Design"
         ],
-        subjects: []
+        skills: []
     }
 ];
 
@@ -49,42 +49,54 @@ const Education = () => {
             </div>
 
             {/* MONASH Title */}
-            <div className="mb-12">
-                <h1 className="text-7xl font-bold w-full">MONASH</h1>
+            <div className="mb-16">
+                <h1 className="text-8xl font-black tracking-wide">MONASH</h1>
                 <div className="w-full h-px bg-black mt-4"></div>
             </div>
 
             {/* Education Details */}
             <div className="space-y-20">
                 {educations.map((edu, index) => (
-                    <div key={index} className="relative">
-                        {/* Content Container */}
-                        <div className="flex">
-                            {/* Left Column - Degree Info */}
-                            <div className="w-1/2">
-                                <h3 className="text-xl font-bold mb-2">{edu.degree}</h3>
-                                <p className="text-sm">{edu.courseId}</p>
-                            </div>
-
-                            {/* Right Columns - Course Details and Subjects */}
-                            <div className="w-1/2 flex">
+                    <div key={index}>
+                        <div className="w-1/2">
+                            {/* Content Row with 50% left margin */}
+                            <div className="flex">
+                                {/* Left side - Empty space */}
                                 <div className="w-1/2">
-                                    {edu.courseDetails.map((detail, idx) => (
-                                        <p key={idx} className="text-sm mb-1">
-                                            {detail}
-                                        </p>
-                                    ))}
+                                    <div className="pl-20">
+                                        <h3 className="text-2xl font-bold mb-2">{edu.degree}</h3>
+                                        <p className="text-base">{edu.courseId}</p>
+                                    </div>
+                                </div>
+
+                                {/* Right side - Split into two columns */}
+                                <div className="w-1/2 flex gap-8">
+                                    {/* Course Details Column */}
+                                    <div className="w-1/2 space-y-1">
+                                        {edu.courseDetails.map((detail, idx) => (
+                                            <p key={idx} className="text-sm">
+                                                {detail}
+                                            </p>
+                                        ))}
+                                    </div>
+                                    {/* Skills Column */}
+                                    <div className="w-1/2 space-y-1">
+                                        {edu.skills.map((skill, idx) => (
+                                            <p key={idx} className="text-sm">
+                                                {skill}
+                                            </p>
+                                        ))}
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                        {/* Divider */}
-                        {index < educations.length - 1 && (
-                            <div className="w-full h-px bg-black mt-12"></div>
-                        )}
-                    </div>
+                            {/* Divider */}
+                            {index < educations.length - 1 && (
+                                <div className="w-full h-px bg-black mt-16"></div>
+                            )}
+                        </div>
                 ))}
-            </div>
+                    </div>
         </section>
     );
 };
