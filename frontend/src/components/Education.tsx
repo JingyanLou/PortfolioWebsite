@@ -1,4 +1,3 @@
-import React from 'react';
 
 type Education = {
     degree: string;
@@ -79,11 +78,14 @@ const Education = () => {
                         </div>
 
                         {/* Divider */}
-                        {index < educations.length - 1 && (
+                        {index < educations.length && (
                             <div className="px-16">
                                 <div className="w-full h-px bg-black mt-16"></div>
                             </div>
                         )}
+
+
+
                     </div>
                 ))}
             </div>
