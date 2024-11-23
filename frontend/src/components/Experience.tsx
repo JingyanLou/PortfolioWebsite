@@ -18,14 +18,7 @@ const experiences: Experience[] = [
         imageSrc: "images/IE-TA32.jpg",
         imagePosition: 'bottom'
     },
-    {
-        company: "MONASH UNIVERSITY",
-        title: "IT Peer Mentor",
-        period: "JUL 2024 - OCT 2024",
-        description: "Provide supports to over 40 first year IT students and help them transit into university lifes.",
-        imageSrc: "images/PeerMentor.jpg",
-        imagePosition: 'bottom-right'
-    }
+
 ];
 
 const Experience = () => {
