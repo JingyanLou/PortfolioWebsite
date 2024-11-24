@@ -16,8 +16,6 @@ Swiss Design, also known as the International Typographic Style, is a graphic de
 
 
 ## **UI Previews**  
-Below are previews of the website's design and layout:  
-
 <div align="center">
 <img width="1302" alt="Homepage" src="https://github.com/user-attachments/assets/8a6e2e8f-b4a8-4b52-baa0-3432c9cac47c">
 <img width="1234" alt="Project Page" src="https://github.com/user-attachments/assets/dd8d1d76-50e9-42b4-b406-575aa8505f78">
