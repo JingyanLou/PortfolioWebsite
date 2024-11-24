@@ -13,7 +13,7 @@ Swiss Design, also known as the International Typographic Style, is a graphic de
 - Sans-serif typography.  
 - Minimalistic and structured designs.  
 
----
+
 
 ## **UI Previews**  
 Below are previews of the website's design and layout:  
@@ -27,7 +27,7 @@ Below are previews of the website's design and layout:
 <img width="1248" alt="Gallery" src="https://github.com/user-attachments/assets/b1faa4f1-6608-403d-ac23-4c476b7968cf">
 </div>  
 
----
+
 
 ## **System Diagram**  
 The architecture of the portfolio is as follows:  
@@ -36,4 +36,4 @@ The architecture of the portfolio is as follows:
 <img alt="System Diagram" src="https://github.com/user-attachments/assets/01e9af60-aa9c-4a0d-8386-d45218697f6e">
 </div>  
 
----
+
