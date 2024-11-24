@@ -15,7 +15,7 @@ const experiences: Experience[] = [
         title: "Fullstack developer",
         period: "JUL 2024 - OCT 2024",
         description: "Led all technical aspects of the full-stack development,DevOps cloud infrastructures",
-        imageSrc: "images/IE-TA32.jpg",
+        imageSrc: "/images/IE-TA32.jpg",
         imagePosition: 'bottom'
     },
 
